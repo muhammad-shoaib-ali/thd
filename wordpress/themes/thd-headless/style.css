@@ -1,0 +1,15 @@
+/*
+Theme Name:  TechHowDaily Headless
+Theme URI:   https://techhowdaily.com
+Author:      TechHowDaily
+Description: A deliberately empty theme for a headless WordPress install. It
+             renders no front end. WordPress requires an active theme to boot,
+             so this is the smallest valid one: it serves nothing, loads no CSS
+             or JS, and redirects any visitor who reaches this subdomain to the
+             real site. All public rendering is done by the Next.js front end.
+Version:     1.0.0
+License:     GPL-2.0-or-later
+Text Domain: thd-headless
+*/
+
+/* Intentionally empty. No stylesheet is ever enqueued. */

@@ -1,0 +1,20 @@
+Extract this zip directly into  D:\thd
+
+It adds three things your project is missing:
+
+  wordpress\                        the headless theme + the 2 WP plugins
+  .github\workflows\deploy.yml      the CI/CD pipeline
+  setup.sh                          the VM provisioning script
+
+Then push them to GitHub:
+
+  cd D:\thd
+  git add .
+  git commit -m "add wordpress folder, setup script and deploy workflow"
+  git push
+
+After that, on the VM:
+
+  curl -O https://raw.githubusercontent.com/muhammad-shoaib-ali/thd/main/setup.sh
+  chmod +x setup.sh
+  ./setup.sh
