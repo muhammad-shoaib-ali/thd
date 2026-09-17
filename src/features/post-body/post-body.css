@@ -1,0 +1,36 @@
+/* Region: post-body. Built from the mockup's own atoms — the chip, the
+   meta row, the radius and the surface colours — so the article page reads
+   as the same site rather than a second design (17.1.9). */
+
+.crumbs{display:flex;gap:10px;align-items:center;color:var(--mute);font-size:13.5px;margin-bottom:18px}
+.crumbs a{color:var(--mute)}
+.crumbs a:hover{color:var(--text)}
+
+.phead{max-width:66ch}
+.phead h1{font-family:var(--d);font-size:clamp(28px,4.4vw,46px);line-height:1.1;letter-spacing:-.02em}
+.pdek{color:var(--mute);font-size:17px;line-height:1.6;margin:14px 0 18px;max-width:60ch}
+
+.pcover{position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid var(--line);
+        border-radius:var(--r);background:var(--surface);margin:26px 0 34px}
+
+.prose{max-width:68ch;font-size:16.5px;line-height:1.75;color:#DDE1E7}
+.prose h2{font-family:var(--d);font-size:26px;line-height:1.25;margin:40px 0 12px;letter-spacing:-.01em}
+.prose h3{font-family:var(--d);font-size:20px;margin:30px 0 10px}
+.prose p{margin:0 0 18px}
+.prose a{color:var(--mint);border-bottom:1px solid rgba(0,229,153,.3)}
+.prose a:hover{border-bottom-color:var(--mint)}
+.prose ul,.prose ol{margin:0 0 18px;padding-left:22px}
+.prose li{margin:0 0 8px}
+.prose img{max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line)}
+.prose figure{margin:26px 0}
+.prose figcaption{color:var(--dim);font-size:13.5px;margin-top:8px}
+.prose blockquote{margin:26px 0;padding:14px 20px;border-left:3px solid var(--mint);
+                  background:var(--surface);border-radius:0 var(--r) var(--r) 0;color:var(--text)}
+.prose pre{background:#0E1116;border:1px solid var(--line);border-radius:var(--r);
+           padding:16px 18px;overflow-x:auto;font-size:13.5px;line-height:1.6;margin:0 0 20px}
+.prose code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+.prose :not(pre)>code{background:var(--raised);border:1px solid var(--line);
+                      border-radius:6px;padding:1px 6px}
+.prose table{width:100%;border-collapse:collapse;margin:0 0 22px;font-size:14.5px}
+.prose th,.prose td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.prose th{background:var(--surface);font-family:var(--d);font-weight:600}

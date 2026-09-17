@@ -1,0 +1,33 @@
+/* TOKENS — lifted verbatim from the approved mockup (12.8: VERIFIED).
+   The eleven colours, two faces and one radius are the mockup's own. Two
+   values are ADDED, and both are recorded as additions rather than passed
+   off as the mockup's: --amber and --rose close the chip gap (see below). */
+
+:root{
+  --bg:#0B0C0F;
+  --surface:#14161B;
+  --raised:#1B1E25;
+  --line:#262A32;
+  --text:#F2F3F5;
+  --mute:#9BA1AC;
+  --dim:#6B7280;
+  --mint:#00E599;
+  --coral:#FF7A45;
+  --violet:#A78BFA;
+  --sky:#38BDF8;
+  --d:"Sora",system-ui,sans-serif;
+  --b:"Inter",system-ui,sans-serif;
+  --r:14px;
+
+  /* ADDED at production, not in the mockup. The mockup defines four chip
+     colours (.c-ai .c-how .c-app .c-fix) for six categories, leaving
+     Software and Reviews with no accent. These two extend the existing
+     hue family rather than inventing a new one. Swap freely — they are
+     the only non-mockup colours in this file. */
+  --amber:#FBBF24;   /* Software */
+  --rose:#FB7185;    /* Reviews  */
+
+  /* ADDED: the mockup's single easing curve, named so no component
+     inlines a cubic-bezier (Module 11). */
+  --arrive:cubic-bezier(.16,1,.3,1);
+}

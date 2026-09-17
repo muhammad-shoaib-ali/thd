@@ -1,0 +1,9 @@
+/* Lifted verbatim from the approved mockup techhowdaily.html — this file
+   is a slice of that file's own CSS, so every value here is VERIFIED
+   rather than estimated (12.8). Owner region: section-head (17.1.2).
+   Tokens resolve from design/tokens.css. Do not add values here that
+   are not in the mockup; changes belong to a spec revision (12.10.1). */
+
+.shead{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:26px}
+.shead h2{font-size:clamp(21px,2.4vw,30px);font-weight:800}
+.shead p{margin:7px 0 0;color:var(--mute);font-size:15px}

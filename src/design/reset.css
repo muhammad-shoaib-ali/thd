@@ -1,0 +1,10 @@
+/* Base reset and layout primitives, lifted from the mockup. */
+
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:99;background:var(--mint);color:#08130E;padding:10px 16px;border-radius:8px}
+.w{max-width:1240px;margin:0 auto;padding:0 24px}
+.sec{padding:56px 0}

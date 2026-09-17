@@ -1,0 +1,12 @@
+/* Lifted verbatim from the approved mockup techhowdaily.html — this file
+   is a slice of that file's own CSS, so every value here is VERIFIED
+   rather than estimated (12.8). Owner region: trend-ticker (17.1.2).
+   Tokens resolve from design/tokens.css. Do not add values here that
+   are not in the mockup; changes belong to a spec revision (12.10.1). */
+
+/* ---------------- trending ---------------- */
+.trend{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:44px;padding:20px 0;overflow:hidden}
+.trow{display:flex;align-items:center;gap:34px;width:max-content;animation:march 64s linear infinite}
+.titem{display:flex;align-items:center;gap:11px;font-size:14.5px;color:var(--mute);white-space:nowrap}
+.titem b{font-family:var(--d);font-weight:800;font-size:17px;color:var(--line);letter-spacing:-.04em}
+@keyframes march{from{transform:translateX(0)}to{transform:translateX(-50%)}}

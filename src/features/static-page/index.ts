@@ -1,0 +1,1 @@
+export { StaticPage } from "./StaticPage";

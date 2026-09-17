@@ -1,0 +1,26 @@
+/* Cross-region atoms, lifted from the mockup: the chip, the CTA, the meta
+   row, the "more" link and the .uf entrance. These are shared, so per
+   24.13.1 they live in design/ and not inside any one feature folder.
+   Two chip classes are ADDED to cover the categories the mockup left
+   without an accent — see tokens.css. */
+
+.cta{background:var(--mint);color:#08130E;font-weight:600;font-size:14px;padding:9px 16px;border-radius:10px;border:0;cursor:pointer;font-family:var(--b)}
+@media(max-width:560px){.cta{display:none}}
+.meta{display:flex;align-items:center;gap:12px;margin-top:18px;font-size:13.5px;color:var(--dim)}
+.dot{width:3px;height:3px;border-radius:50%;background:var(--dim)}
+.av{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--sky))}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:999px;border:1px solid}
+.c-ai{color:var(--mint);border-color:rgba(0,229,153,.35);background:rgba(0,229,153,.08)}
+.c-how{color:var(--sky);border-color:rgba(56,189,248,.35);background:rgba(56,189,248,.08)}
+.c-app{color:var(--violet);border-color:rgba(167,139,250,.35);background:rgba(167,139,250,.08)}
+.c-fix{color:var(--coral);border-color:rgba(255,122,69,.35);background:rgba(255,122,69,.08)}
+.more{font-size:14px;color:var(--mint);font-weight:600;white-space:nowrap}
+.more:hover{text-decoration:underline;text-underline-offset:4px}
+.js .uf{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.js .uf.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .uf{opacity:1;transform:none}}
+
+/* ADDED: the two missing chips, built from the same rule shape as the four
+   in the mockup so the family stays consistent. */
+.c-sw{color:var(--amber);border-color:rgba(251,191,36,.35);background:rgba(251,191,36,.08)}
+.c-rev{color:var(--rose);border-color:rgba(251,113,133,.35);background:rgba(251,113,133,.08)}

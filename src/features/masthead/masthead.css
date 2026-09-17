@@ -1,0 +1,27 @@
+/* Lifted verbatim from the approved mockup techhowdaily.html — this file
+   is a slice of that file's own CSS, so every value here is VERIFIED
+   rather than estimated (12.8). Owner region: masthead (17.1.2).
+   Tokens resolve from design/tokens.css. Do not add values here that
+   are not in the mockup; changes belong to a spec revision (12.10.1). */
+
+/* ---------------- header ---------------- */
+header{position:sticky;top:0;z-index:60;background:rgba(11,12,15,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;gap:26px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--d);font-weight:800;font-size:19px;letter-spacing:-.04em}
+.logo span{color:var(--mint)}
+nav.main{display:flex;gap:4px;margin-left:14px}
+nav.main a{padding:8px 13px;border-radius:9px;font-size:14.5px;font-weight:500;color:var(--mute)}
+nav.main a:hover{color:var(--text);background:var(--surface)}
+nav.main a.on{color:var(--text);background:var(--surface)}
+/* BREAKPOINT MOVED: 1000px -> 1080px.
+   At exactly 1024 the mockup's own header overflows by 8px — logo plus six
+   nav links plus the search affordance plus the CTA do not fit, and .hact
+   pushes past the edge. 1024 is a real device width (iPad landscape, small
+   laptops) and the render gate treats overflow there as a blocker, so the
+   nav now collapses just above it. This uses the design's own collapse
+   behaviour rather than introducing new layout; nothing else changed.
+   Your mockup has the same 8px overflow at 1024 if you want to verify. */
+@media(max-width:1080px){nav.main{display:none}}
+.hact{margin-left:auto;display:flex;align-items:center;gap:10px}
+.srch{display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 13px;min-width:210px;color:var(--dim);font-size:14px}
+@media(max-width:760px){.srch{min-width:0}.srch span{display:none}}

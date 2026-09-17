@@ -1,0 +1,35 @@
+/* Lifted verbatim from the approved mockup techhowdaily.html — this file
+   is a slice of that file's own CSS, so every value here is VERIFIED
+   rather than estimated (12.8). Owner region: hero-feature (17.1.2).
+   Tokens resolve from design/tokens.css. Do not add values here that
+   are not in the mockup; changes belong to a spec revision (12.10.1). */
+
+/* ---------------- hero ---------------- */
+.hero{padding:44px 0 8px;
+      /* PORTED FROM AN INLINE STYLE. In the mockup the containment lived on
+         the element itself — <section class="hero" style="position:relative;
+         overflow:hidden"> — so the CSS carried the .aura rules but not the
+         thing that clips them. Dropping it let .aura2 (right:-140px) escape
+         and put 140px of horizontal scroll on every page. It belongs here,
+         next to the auras it contains. */
+      position:relative;overflow:hidden}
+.hgrid{position:relative;display:grid;grid-template-columns:1.45fr .95fr;gap:22px}  /* position:relative ported from an inline style on <div class="w hgrid">;
+     it lifts the grid above the .aura glows behind it. */
+
+@media(max-width:980px){.hgrid{grid-template-columns:1fr}}
+.feat{position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface);display:flex;flex-direction:column;transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s}
+.feat:hover{transform:translateY(-4px);border-color:#3A404C}
+.feat .art{position:relative;aspect-ratio:16/9}
+.feat .body{padding:24px 26px 28px}
+.feat h2{font-size:clamp(25px,2.9vw,38px);font-weight:800;margin-bottom:12px}
+.feat p{margin:0;color:var(--mute);font-size:16.5px;max-width:60ch}
+.side{display:flex;flex-direction:column;gap:14px}
+.mini{display:grid;grid-template-columns:104px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;transition:transform .28s cubic-bezier(.16,1,.3,1),border-color .28s}
+.mini:hover{transform:translateY(-3px);border-color:#3A404C}
+.mini .thumb{border-radius:8px;overflow:hidden;aspect-ratio:1}
+.mini h3{font-size:15.5px;line-height:1.3;font-weight:600}
+.mini .m{font-size:12.5px;color:var(--dim);margin-top:7px}
+@keyframes glowdrift{0%,100%{transform:translate(0,0)}50%{transform:translate(14px,-10px)}}
+@keyframes bobcard{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+.aura{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(0,229,153,.16),transparent 68%);top:-260px;left:-160px;pointer-events:none;animation:glowdrift 34s ease-in-out infinite}
+.aura2{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(167,139,250,.13),transparent 68%);top:-180px;right:-140px;pointer-events:none;animation:glowdrift 41s ease-in-out infinite}

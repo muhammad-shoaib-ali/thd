@@ -1,0 +1,1 @@
+export { TrendTicker } from "./TrendTicker";

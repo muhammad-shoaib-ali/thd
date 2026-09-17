@@ -1,0 +1,7 @@
+/* Type scale and page ground, lifted from the mockup. Faces are loaded by
+   next/font in app/(site)/layout.tsx, which supplies --d and --b. */
+
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--b);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0;font-family:var(--d);font-weight:700;line-height:1.14;letter-spacing:-.03em}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--dim)}
